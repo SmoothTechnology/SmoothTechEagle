@@ -63,11 +63,11 @@
 <pad name="G" x="-2.552421875" y="-0.01139375" drill="1" diameter="1.85" shape="offset" rot="R270"/>
 <pad name="R" x="-0.002421875" y="-0.01139375" drill="1" diameter="1.85" shape="offset" rot="R270"/>
 <pad name="W" x="2.497578125" y="-0.01139375" drill="1" diameter="1.85" shape="offset" rot="R270"/>
-<hole x="-4.852421875" y="-1.75" drill="1"/>
-<hole x="-2.552421875" y="-1.75" drill="1"/>
-<hole x="-0.002421875" y="-1.75" drill="1"/>
-<hole x="2.497578125" y="-1.75" drill="1"/>
-<hole x="4.797578125" y="-1.75" drill="1"/>
+<hole x="-4.852421875" y="-1.5" drill="0.8"/>
+<hole x="-2.552421875" y="-1.5" drill="0.8"/>
+<hole x="-0.002421875" y="-1.5" drill="0.8"/>
+<hole x="2.497578125" y="-1.5" drill="0.8"/>
+<hole x="4.797578125" y="-1.5" drill="0.8"/>
 </package>
 <package name="SOIC127P600X175-8N">
 <smd name="1" x="-2.3622" y="1.905" dx="1.9812" dy="0.5588" layer="1"/>
