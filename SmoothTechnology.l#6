@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.003125" unitdist="mic" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="mm"/>
+<grid distance="0.05" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -38,7 +38,7 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
@@ -58,11 +58,16 @@
 <library>
 <packages>
 <package name="RGBWSTRIP">
-<pad name="VCC" x="0" y="0" drill="1" diameter="1.65" shape="offset" rot="R90"/>
-<pad name="B" x="9.65" y="0" drill="1" diameter="1.65" shape="offset" rot="R90"/>
-<pad name="G" x="2.3" y="0" drill="1" diameter="1.85" shape="offset" rot="R90"/>
-<pad name="R" x="4.85" y="0" drill="1" diameter="1.85" shape="offset" rot="R90"/>
-<pad name="W" x="7.35" y="0" drill="1" diameter="1.85" shape="offset" rot="R90"/>
+<pad name="VSS" x="-4.852421875" y="-0.01139375" drill="1" diameter="1.65" shape="offset" rot="R270"/>
+<pad name="B" x="4.797578125" y="-0.01139375" drill="1" diameter="1.65" shape="offset" rot="R270"/>
+<pad name="G" x="-2.552421875" y="-0.01139375" drill="1" diameter="1.85" shape="offset" rot="R270"/>
+<pad name="R" x="-0.002421875" y="-0.01139375" drill="1" diameter="1.85" shape="offset" rot="R270"/>
+<pad name="W" x="2.497578125" y="-0.01139375" drill="1" diameter="1.85" shape="offset" rot="R270"/>
+<hole x="-4.852421875" y="-1.75" drill="1"/>
+<hole x="-2.552421875" y="-1.75" drill="1"/>
+<hole x="-0.002421875" y="-1.75" drill="1"/>
+<hole x="2.497578125" y="-1.75" drill="1"/>
+<hole x="4.797578125" y="-1.75" drill="1"/>
 </package>
 <package name="SOIC127P600X175-8N">
 <smd name="1" x="-2.3622" y="1.905" dx="1.9812" dy="0.5588" layer="1"/>
@@ -210,6 +215,13 @@
 </gates>
 <devices>
 <device name="" package="RGBWSTRIP">
+<connects>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="G" pad="G"/>
+<connect gate="G$1" pin="R" pad="R"/>
+<connect gate="G$1" pin="VSS" pad="VSS"/>
+<connect gate="G$1" pin="W" pad="W"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
